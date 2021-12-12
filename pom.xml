@@ -43,7 +43,7 @@
                         <goals>
                             <goal>shade</goal>
                         </goals>
-                        <configuration>
+                        <!-- <configuration>
                             <shadedArtifactAttached>true</shadedArtifactAttached>
                             <transformers>
                                 <transformer
@@ -51,7 +51,7 @@
                                     <mainClass>com.yourorganization.maven_sample.LogicPositivizer</mainClass>
                                 </transformer>
                             </transformers>
-                        </configuration>
+                        </configuration> -->
                     </execution>
                 </executions>
             </plugin>
