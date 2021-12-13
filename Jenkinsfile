@@ -3,23 +3,30 @@ pipeline {
     stages {
         stage ('clean & Compile stage') { 
             steps {
-             sh 'mvn clean'
+                withMaven(maven : 'MAVAN_HOME') {
+                   sh 'mvn clean compile'
+                }
             }
         }
-        stage ('validate Stage') { 
+        stage('validate Stage') { 
             steps {
-             sh 'mvn validate'
+                withMaven(maven : 'MAVAN_HOME') {
+                   sh 'mvn validate'
+                }
             }
         }
-        stage ('Test Stage') { 
+        stage('Test Stage') { 
             steps {
-             sh 'mvn test'
+                withMaven(maven : 'MAVAN_HOME') {
+                   sh 'mvn test'
+                }
             }
         }
-        stage ('Build Stage') { 
+        stage('Build Stage') { 
             steps {
-             sh 'mvn package'
+                withMaven(maven : 'MAVAN_HOME') {
+                   sh 'mvn package'
+            }
         }
     }
-}
 }
