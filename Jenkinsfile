@@ -4,7 +4,7 @@ pipeline {
         stage ('clean & Compile stage') { 
             steps {
                 withMaven(maven : 'MAVAN_HOME') {
-                   sh 'mvn clean compile'
+                   sh 'mvn clean'
                 }
             }
         }
